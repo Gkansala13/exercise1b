@@ -1,26 +1,28 @@
 class Bike
-    # ...
   end
   
   class RedBicycle < Bike
+  #fixed this name, took out the all caps AMOUNT 
+  #and made it the correct style with an '@' in the front
+    @amount = 10
   
-    AMOUNT = 10
-  
-    def initialize(a, b, c)
-      @height = a
-      @weight = b
-      @color = c
+    def initialize(height, weight, color)
+      @height =height 
+      @weight = weight
+      @color = color
     end
-  
-    def getColor
-      @color
-    end
-  
+  #rearranged the order of the def statments below
+  #to match the order above.
     def retreive_height
       @height
     end
   
     def change_weight
-      @weight -= AMOUNT
+      @weight -= @amount
     end
+    
+    def getColor
+        @color
+      end
+    
   end
